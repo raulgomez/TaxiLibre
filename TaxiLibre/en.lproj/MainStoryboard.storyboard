@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="11"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je1-Il-43j">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Registro">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kHi-PB-2sK" kind="modal" identifier="registro" modalTransitionStyle="crossDissolve" id="YBI-ME-pSa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-hJ-Hst">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="uq1-UE-4pO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PD-rp-n16">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-Bg-DE1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Iniciar sesión">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inicioSesion:" destination="2" eventType="touchUpInside" id="8Ui-7f-Cec"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCE-dL-7Uc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="3xx-UT-WOs"/>
+                                    <constraint firstAttribute="height" constant="21" id="BDU-55-GcK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RCE-dL-7Uc" firstAttribute="centerX" secondItem="l3d-hJ-Hst" secondAttribute="centerX" type="default" id="Bwn-5J-gAd"/>
+                            <constraint firstItem="l3d-hJ-Hst" firstAttribute="trailing" secondItem="8PD-rp-n16" secondAttribute="trailing" type="default" id="CMb-2Y-muy"/>
+                            <constraint firstAttribute="bottom" secondItem="je1-Il-43j" secondAttribute="bottom" constant="42" id="DTR-K1-LTP"/>
+                            <constraint firstItem="RCE-dL-7Uc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="26" id="Nlt-gb-JZe"/>
+                            <constraint firstItem="8PD-rp-n16" firstAttribute="top" secondItem="3" secondAttribute="top" constant="147" id="Ro9-oP-y8k"/>
+                            <constraint firstItem="fhx-Bg-DE1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="228" id="ULd-II-xEI"/>
+                            <constraint firstItem="fhx-Bg-DE1" firstAttribute="centerX" secondItem="8PD-rp-n16" secondAttribute="centerX" type="default" id="Zbf-yl-kbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="apl-1S-UOC"/>
+                            <constraint firstItem="l3d-hJ-Hst" firstAttribute="top" secondItem="3" secondAttribute="top" constant="77" id="bQC-WZ-rDW"/>
+                            <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bcr-if-aDO"/>
+                            <constraint firstItem="l3d-hJ-Hst" firstAttribute="leading" secondItem="8PD-rp-n16" secondAttribute="leading" type="default" id="c7J-rM-rQb"/>
+                            <constraint firstItem="je1-Il-43j" firstAttribute="leading" secondItem="8PD-rp-n16" secondAttribute="leading" type="default" id="q8b-4X-PX6"/>
+                            <constraint firstItem="l3d-hJ-Hst" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="xHU-rf-hvZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contrasena" destination="8PD-rp-n16" id="AxT-4K-TNk"/>
+                        <outlet property="mensaje" destination="RCE-dL-7Uc" id="umi-UF-Hq2"/>
+                        <outlet property="usuario" destination="l3d-hJ-Hst" id="gWw-lL-wca"/>
+                        <segue destination="MQO-vf-EjP" kind="modal" identifier="inicio" modalTransitionStyle="flipHorizontal" id="5U2-Le-MfT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="74"/>
+        </scene>
+        <!--Registro View Controller - Title-->
+        <scene sceneID="v9L-wZ-fZ9">
+            <objects>
+                <viewController id="kHi-PB-2sK" customClass="RegistroViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piN-LN-Wl1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-de-o6l">
+                                <items>
+                                    <navigationItem title="Registro" id="TCQ-cL-TdK">
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="4uP-ts-dX6">
+                                            <connections>
+                                                <action selector="dismissVista:" destination="kHi-PB-2sK" id="vr7-gN-eFP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ip-ba-PaU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="sWU-th-HNI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="quitarTeclado:" destination="kHi-PB-2sK" eventType="editingDidEndOnExit" id="CeS-6p-RO1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-5x-M3V">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="quitarTeclado:" destination="kHi-PB-2sK" eventType="editingDidEndOnExit" id="7qd-W6-Lmh"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QA1-ND-1uF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="ys9-XL-c1g"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="quitarTeclado:" destination="kHi-PB-2sK" eventType="editingDidEndOnExit" id="obh-5W-Qi0"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gN-jn-dYz">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="quitarTeclado:" destination="kHi-PB-2sK" eventType="editingDidEndOnExit" id="9Bt-5F-iVL"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzw-kD-ui0">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Registrar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registrar:" destination="kHi-PB-2sK" eventType="touchUpInside" id="5yx-Kb-QqH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19074856505102045" green="0.19074856505102045" blue="0.19074856505102045" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iyf-de-o6l" firstAttribute="trailing" secondItem="piN-LN-Wl1" secondAttribute="trailing" type="default" id="2FG-91-zrJ"/>
+                            <constraint firstItem="2Ip-ba-PaU" firstAttribute="top" secondItem="piN-LN-Wl1" secondAttribute="top" constant="74" id="3by-Af-ZKn"/>
+                            <constraint firstItem="Iyf-de-o6l" firstAttribute="top" secondItem="piN-LN-Wl1" secondAttribute="top" type="default" id="7AN-ge-in8"/>
+                            <constraint firstItem="2Ip-ba-PaU" firstAttribute="centerX" secondItem="3gN-jn-dYz" secondAttribute="centerX" type="default" id="7jO-iU-QFO"/>
+                            <constraint firstItem="QA1-ND-1uF" firstAttribute="centerX" secondItem="Iyf-de-o6l" secondAttribute="centerX" type="default" id="Ek3-3s-nkV"/>
+                            <constraint firstItem="Iyf-de-o6l" firstAttribute="leading" secondItem="piN-LN-Wl1" secondAttribute="leading" type="default" id="KXC-2y-QLw"/>
+                            <constraint firstItem="2Ip-ba-PaU" firstAttribute="trailing" secondItem="f2P-5x-M3V" secondAttribute="trailing" type="default" id="Mee-lT-MjK"/>
+                            <constraint firstItem="hzw-kD-ui0" firstAttribute="centerX" secondItem="3gN-jn-dYz" secondAttribute="centerX" type="default" id="ewx-mp-PAm"/>
+                            <constraint firstItem="f2P-5x-M3V" firstAttribute="top" secondItem="piN-LN-Wl1" secondAttribute="top" constant="138" id="ezb-Ny-pYK"/>
+                            <constraint firstItem="2Ip-ba-PaU" firstAttribute="leading" secondItem="f2P-5x-M3V" secondAttribute="leading" type="default" id="fzr-8z-iRS"/>
+                            <constraint firstItem="2Ip-ba-PaU" firstAttribute="trailing" secondItem="3gN-jn-dYz" secondAttribute="trailing" type="default" id="hBu-Rr-XyW"/>
+                            <constraint firstAttribute="bottom" secondItem="3gN-jn-dYz" secondAttribute="bottom" constant="159" id="iu2-vg-MHa"/>
+                            <constraint firstItem="QA1-ND-1uF" firstAttribute="top" secondItem="piN-LN-Wl1" secondAttribute="top" constant="207" id="kC2-HJ-6Vr"/>
+                            <constraint firstAttribute="bottom" secondItem="hzw-kD-ui0" secondAttribute="bottom" constant="81" id="oBY-Cu-DLX"/>
+                            <constraint firstItem="QA1-ND-1uF" firstAttribute="leading" secondItem="3gN-jn-dYz" secondAttribute="leading" type="default" id="tXN-FZ-H3N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="tBG-s9-vQO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contrasena" destination="f2P-5x-M3V" id="f9i-Bf-qRh"/>
+                        <outlet property="contrasenaConfirm" destination="QA1-ND-1uF" id="fzU-gi-pez"/>
+                        <outlet property="correo" destination="3gN-jn-dYz" id="p6R-YZ-cpH"/>
+                        <outlet property="nombre" destination="2Ip-ba-PaU" id="XbS-fG-bzf"/>
+                        <segue destination="MQO-vf-EjP" kind="modal" identifier="inicioRegistro" modalTransitionStyle="flipHorizontal" id="heD-Kr-2kl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OxM-me-G2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="-395"/>
+        </scene>
+        <!--Bienvenida View Controller-->
+        <scene sceneID="qaK-wX-y6M">
+            <objects>
+                <viewController id="MQO-vf-EjP" customClass="BienvenidaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dnz-VA-ZOY">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-rr-D45">
+                                <items>
+                                    <navigationItem title="Bienvenido" id="HiM-Pu-EjB">
+                                        <barButtonItem key="leftBarButtonItem" title="Salir" id="tPq-DZ-nOO">
+                                            <connections>
+                                                <action selector="dismissVista:" destination="MQO-vf-EjP" id="lrB-X3-k7H"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bienvenido al sistema" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBF-hY-fZ7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19383769132653061" green="0.19383769132653061" blue="0.19383769132653061" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VNc-rr-D45" firstAttribute="leading" secondItem="dnz-VA-ZOY" secondAttribute="leading" type="default" id="Jx2-cr-uQJ"/>
+                            <constraint firstItem="VNc-rr-D45" firstAttribute="top" secondItem="dnz-VA-ZOY" secondAttribute="top" type="default" id="RhB-4b-Qnn"/>
+                            <constraint firstItem="lBF-hY-fZ7" firstAttribute="centerX" secondItem="VNc-rr-D45" secondAttribute="centerX" type="default" id="fGd-ma-A0f"/>
+                            <constraint firstItem="lBF-hY-fZ7" firstAttribute="top" secondItem="dnz-VA-ZOY" secondAttribute="top" constant="219" id="g0V-Cv-bGG"/>
+                            <constraint firstItem="VNc-rr-D45" firstAttribute="trailing" secondItem="dnz-VA-ZOY" secondAttribute="trailing" type="default" id="rp5-U3-I9R"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iw-nK-THo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="13"/>
+        </scene>
+        <!--Flipside View Controller-->
+        <scene sceneID="9">
+            <objects>
+                <viewController id="6" customClass="FlipsideViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                                <items>
+                                    <navigationItem title="Acerca" id="13">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="14">
+                                            <connections>
+                                                <action selector="done:" destination="6" id="16"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Taxi Libre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-RU-x4c">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Norma Escobedo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exQ-rc-SjF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Raul Gómez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRp-E7-fPh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="exQ-rc-SjF" firstAttribute="top" secondItem="7" secondAttribute="top" constant="219" id="CvQ-tI-4ix"/>
+                            <constraint firstItem="exQ-rc-SjF" firstAttribute="centerX" secondItem="VRp-E7-fPh" secondAttribute="centerX" type="default" id="PPS-xh-jl0"/>
+                            <constraint firstItem="1Yg-RU-x4c" firstAttribute="centerX" secondItem="12" secondAttribute="centerX" type="default" id="R9A-Jg-01t"/>
+                            <constraint firstAttribute="bottom" secondItem="VRp-E7-fPh" secondAttribute="bottom" constant="203" id="bCQ-Sh-kIZ"/>
+                            <constraint firstItem="exQ-rc-SjF" firstAttribute="centerX" secondItem="1Yg-RU-x4c" secondAttribute="centerX" type="default" id="cpY-aU-ths"/>
+                            <constraint firstItem="12" firstAttribute="leading" secondItem="7" secondAttribute="leading" type="default" id="kyL-VC-rMY"/>
+                            <constraint firstItem="12" firstAttribute="top" secondItem="7" secondAttribute="top" type="default" id="oQ7-QK-1Ab"/>
+                            <constraint firstItem="1Yg-RU-x4c" firstAttribute="top" secondItem="7" secondAttribute="top" constant="118" id="qEK-bv-Bl8"/>
+                            <constraint firstItem="12" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" type="default" id="yf5-Bx-wHg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="514"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BienvenidaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BienvenidaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissVista:"/>
+            </relationships>
+        </class>
+        <class className="FlipsideViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="inicioSesion:"/>
+                <relationship kind="outlet" name="contrasena" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mensaje" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usuario" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RegistroViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RegistroViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissVista:"/>
+                <relationship kind="action" name="quitarTeclado:"/>
+                <relationship kind="action" name="registrar:"/>
+                <relationship kind="outlet" name="contrasena" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contrasenaConfirm" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="correo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nombre" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="heD-Kr-2kl"/>
+    </inferredMetricsTieBreakers>
+</document>
