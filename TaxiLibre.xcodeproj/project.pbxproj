@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A45289EA1816210C0001312A /* BienvenidaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45289E91816210C0001312A /* BienvenidaViewController.m */; };
+		A4CC8E53181F6CD70071A669 /* MiInformacionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CC8E52181F6CD70071A669 /* MiInformacionViewController.m */; };
 		A4FF2CFA1814A7A500E2DC58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FF2CF91814A7A500E2DC58 /* UIKit.framework */; };
 		A4FF2CFC1814A7A500E2DC58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FF2CFB1814A7A500E2DC58 /* Foundation.framework */; };
 		A4FF2CFE1814A7A500E2DC58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FF2CFD1814A7A500E2DC58 /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		A45289E81816210C0001312A /* BienvenidaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BienvenidaViewController.h; sourceTree = "<group>"; };
 		A45289E91816210C0001312A /* BienvenidaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BienvenidaViewController.m; sourceTree = "<group>"; };
+		A4CC8E51181F6CD70071A669 /* MiInformacionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiInformacionViewController.h; sourceTree = "<group>"; };
+		A4CC8E52181F6CD70071A669 /* MiInformacionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiInformacionViewController.m; sourceTree = "<group>"; };
 		A4FF2CF61814A7A500E2DC58 /* TaxiLibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiLibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FF2CF91814A7A500E2DC58 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A4FF2CFB1814A7A500E2DC58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +73,8 @@
 		A4FF2CED1814A7A500E2DC58 = {
 			isa = PBXGroup;
 			children = (
+				A4CC8E51181F6CD70071A669 /* MiInformacionViewController.h */,
+				A4CC8E52181F6CD70071A669 /* MiInformacionViewController.m */,
 				A4FF2D011814A7A500E2DC58 /* TaxiLibre */,
 				A4FF2CF81814A7A500E2DC58 /* Frameworks */,
 				A4FF2CF71814A7A500E2DC58 /* Products */,
@@ -202,6 +207,7 @@
 				A4FF2D1E1814A7A500E2DC58 /* FlipsideViewController.m in Sources */,
 				A4FF2D261814AD6000E2DC58 /* RegistroViewController.m in Sources */,
 				A45289EA1816210C0001312A /* BienvenidaViewController.m in Sources */,
+				A4CC8E53181F6CD70071A669 /* MiInformacionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
